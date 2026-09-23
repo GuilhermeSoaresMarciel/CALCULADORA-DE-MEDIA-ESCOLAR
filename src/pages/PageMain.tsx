@@ -8,21 +8,6 @@ const inputStyle: string = `w-full bg-sky-950 rounded-lg text-4xl text-center p-
 
 const { QuantidadeDeNotas } = GetDataSettings();
 
-function updateQuantityNTS(localForNTS: string, QuantidadeDeNotas: number) {
-  for (let index = 1; index <= QuantidadeDeNotas; index++) {
-    const element = document.createElement("input");
-
-    element.type = "number";
-    element.placeholder = `Nota ${index}`;
-
-    element.className = inputStyle;
-
-    element.id = `inputNTS${index}`;
-
-    document.getElementById(localForNTS)!.appendChild(element);
-  }
-}
-
 export default function PageMain() {
   const navigate = useNavigate();
   return (
@@ -66,7 +51,17 @@ export default function PageMain() {
             placeholder="9° Ano A"
           />
           <label className="w-full text-4xl">Notas</label>
-          <div id="localForNTS" className="w-full flex flex-col gap-2.5"></div>
+          <div id="localForNTS" className="w-full flex flex-col gap-2.5">
+            {Array.from({ length: QuantidadeDeNotas }, (_, index) => (
+              <input
+                key={index}
+                type="number"
+                placeholder={`Nota ${index + 1}`}
+                className={inputStyle}
+                id={`inputNTS${index + 1}`}
+              />
+            ))}
+          </div>
           <button
             onClick={() => {}}
             className="w-full bg-sky-950 text-4xl rounded-lg font-bold p-2.5 hover:bg-sky-800"
@@ -85,5 +80,3 @@ export default function PageMain() {
     </main>
   );
 }
-
-updateQuantityNTS("localForNTS", QuantidadeDeNotas);
