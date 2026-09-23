@@ -22,7 +22,7 @@ export default function Standard() {
       <article className="w-[70%] bg-sky-900 flex flex-col justify-center items-center gap-2.5 rounded-lg p-2.5">
         <h1 className="text-6xl font-bold">Configurações</h1>
         <label className="text-4xl" htmlFor="NotaMinimaParaPassar">
-          Nota mínima para passar
+          Nota mínima para passar:
         </label>
         <input
           className={inputStyle}
@@ -31,7 +31,7 @@ export default function Standard() {
           placeholder="7"
         />
         <label className="text-4xl" htmlFor="QuantidadeDeNotas">
-          Quantidade de notas
+          Quantidade de notas:
         </label>
         <input
           className={inputStyle}
@@ -40,7 +40,7 @@ export default function Standard() {
           placeholder="3"
         />
         <label className="text-4xl" htmlFor="DivisorDeMedia">
-          Divisor de média
+          Divisor de média:
         </label>
         <input
           className={inputStyle}
