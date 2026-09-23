@@ -3,7 +3,7 @@ export default function SaveData(
   QuantidadeDeNotas: string,
   DivisorDeMedia: string,
 ) {
-  localStorage.setItem("NotaMinimaParaPassar", NotaMinimaParaPassar);
-  localStorage.setItem("QuantidadeDeNotas", QuantidadeDeNotas);
-  localStorage.setItem("DivisorDeMedia", DivisorDeMedia);
+  sessionStorage.setItem("NotaMinimaParaPassar", NotaMinimaParaPassar);
+  sessionStorage.setItem("QuantidadeDeNotas", QuantidadeDeNotas);
+  sessionStorage.setItem("DivisorDeMedia", DivisorDeMedia);
 }
