@@ -6,8 +6,10 @@ interface GetDataSettings {
 
 export default function GetDataSettings(): GetDataSettings {
   return {
-    NotaMinimaParaPassar: Number(localStorage.getItem("NotaMinimaParaPassar")),
-    QuantidadeDeNotas: Number(localStorage.getItem("QuantidadeDeNotas")),
-    DivisorDeMedia: Number(localStorage.getItem("DivisorDeMedia")),
+    NotaMinimaParaPassar: Number(
+      sessionStorage.getItem("NotaMinimaParaPassar"),
+    ),
+    QuantidadeDeNotas: Number(sessionStorage.getItem("QuantidadeDeNotas")),
+    DivisorDeMedia: Number(sessionStorage.getItem("DivisorDeMedia")),
   };
 }
