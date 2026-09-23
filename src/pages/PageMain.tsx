@@ -33,7 +33,7 @@ export default function PageMain() {
             </button>
           </header>
           <label className="text-4xl" htmlFor="NomeDoAluno">
-            Nome do aluno
+            Nome do aluno:
           </label>
           <input
             className={inputStyle}
@@ -42,7 +42,7 @@ export default function PageMain() {
             placeholder="Guilherme"
           />
           <label className="text-4xl" htmlFor="SerieAno">
-            Série/Ano
+            Série/Ano:
           </label>
           <input
             className={inputStyle}
@@ -50,7 +50,7 @@ export default function PageMain() {
             type="number"
             placeholder="9° Ano A"
           />
-          <label className="w-full text-4xl">Notas</label>
+          <label className="w-full text-4xl">Notas:</label>
           <div id="localForNTS" className="w-full flex flex-col gap-2.5">
             {Array.from({ length: QuantidadeDeNotas }, (_, index) => (
               <input
