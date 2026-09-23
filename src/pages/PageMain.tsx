@@ -68,9 +68,7 @@ export default function PageMain() {
           <label className="w-full text-4xl">Notas</label>
           <div id="localForNTS" className="w-full flex flex-col gap-2.5"></div>
           <button
-            onClick={() => {
-              updateQuantityNTS("localForNTS", QuantidadeDeNotas);
-            }}
+            onClick={() => {}}
             className="w-full bg-sky-950 text-4xl rounded-lg font-bold p-2.5 hover:bg-sky-800"
           >
             Calcular
@@ -87,3 +85,5 @@ export default function PageMain() {
     </main>
   );
 }
+
+updateQuantityNTS("localForNTS", QuantidadeDeNotas);
